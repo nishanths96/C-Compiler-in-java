@@ -7,22 +7,7 @@ import SymbolTable.TokenNameConstant;
 
 public class statement extends Node{
 	public statement() throws IOException{
-		Token token = getToken();
-		
-		if(token.tag == TokenNameConstant.DO){
-			token = setToken();
-			statement s = new statement();
-			if(token.tag == TokenNameConstant.WHILE){
-				token = setToken();
-				token = getToken();
-				if(token.tag == TokenNameConstant.OPENPARAN){
-					token = setToken();
-					booleanclass b = new booleanclass();
-					
-				}
-			}
-			
-		}
+		beginProcedure();
 	}
 	public void beginProcedure(){
 		Token token = getToken();
