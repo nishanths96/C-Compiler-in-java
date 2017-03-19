@@ -1,12 +1,13 @@
 package SymbolTable;
 
-public class IntegerNumber extends Number {
-	private int value;
-	public IntegerNumber(int val) {
-		super(TokenNameConstant.INTEGERNUMBER);
-		value=val;
+public class CharacterLiteral extends Token {
+	String value;
+	public CharacterLiteral(String c) {
+		super(TokenNameConstant.CHARACTERLITERAL);
+		value=c;
 	}
-	public Integer getValue() {
-		return value;
+	@Override
+	public String toString(){
+		return "< CharacterLiteral, "+value+" >";
 	}
 }
