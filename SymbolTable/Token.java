@@ -5,5 +5,8 @@ public class Token {
 	public Token(int tag) {
 		this.tag = tag;		
 	}
-	
+	@Override
+	public String toString(){
+		return "< "+TokenNameConstant.getTokenName(tag)+" >";
+	}
 }
