@@ -9,7 +9,7 @@ public class TokenNameConstant {
   public static int REALNUMBER = 6;
   public static int STRINGLITERAL = 7;
   public static int CHARACTERLITERAL = 8;
-  
+  public static int BASICANDARRAYTYPE = 9;
   //KEYWORDS
   public static int WHILE = 101;
   public static int PRINT = 102;
@@ -17,15 +17,9 @@ public class TokenNameConstant {
   public static int BREAK = 104;
   public static int CONTINUE = 105;
   public static int RETURN = 106;
-  public static int INT = 107;
-  public static int FLOAT = 108;
-  public static int DOUBLE = 109;
-  public static int CHAR = 110;
-  public static int ARRAYINT = 111;
-  public static int ARRAYFLOAT = 112;
-  public static int ARRAYDOUBLE = 113;
-  public static int ARRAYCHAR = 114;
-  public static int DO = 115;
+  public static int DO = 107;
+  //SEMI-COLON
+  public static int SEMICOLON = 108;
   
   //BRACKETS
   public static int OPENFLOWER = 201;
@@ -59,7 +53,62 @@ public class TokenNameConstant {
   public static int AND = 421;
   public static int OR = 422;
   
-  //SEMI-COLON
-  public static int SEMICOLON = 501;
+  //types
+  public static final int INT = 501;
+  public static final int FLOAT = 502;
+  public static final int DOUBLE = 503;
+  public static final int CHAR = 504;
+  public static final int ARRAYINT = 505;
+  public static final int ARRAYFLOAT = 506;
+  public static final int ARRAYDOUBLE = 507;
+  public static final int ARRAYCHAR = 508;
+  
+  //EOF
+  public static final int EOF = 601;
+  public static String getTokenName(int tag){
+	  if(tag==WHILE)return "while";
+		if(tag==PRINT)return "printf";
+		if(tag==SCAN)return "scanf";
+		if(tag==BREAK)return "break"; 
+		if(tag==CONTINUE)return "continue"; 
+		if(tag==RETURN)return "return"; 
+		if(tag==INT)return "int"; 
+		if(tag==FLOAT)return "float"; 
+		if(tag==DOUBLE)return "double"; 
+		if(tag==CHAR)return "char"; 
+		if(tag==SEMICOLON)return ";";
+		//brackets
+		if(tag==OPENFLOWER)return "{"; 
+		if(tag==CLOSEFLOWER)return "}"; 
+		if(tag==OPENPARAN)return "("; 
+		if(tag==CLOSEPARAN)return ")"; 
+		if(tag==OPENSQUARE)return "["; 
+		if(tag==CLOSESQUARE)return "]"; 
+		
+		//operators
+		if(tag==ADD)return "+"; 
+		if(tag==ADDEQUAL)return "+="; 
+		if(tag==INCREMENT)return "++"; 
+		if(tag==SUBTRACT)return "-"; 
+		if(tag==SUBTRACTEQUAL)return "-="; 
+		if(tag==DECREMENT)return "--"; 
+		if(tag==MULTIPLY)return "*"; 
+		if(tag==MODULUSEQUAL)return "*="; 
+		if(tag==DIVIDE)return "/"; 
+		if(tag==DIVIDEEQUAL)return "/="; 
+		if(tag==MODULUS)return "%"; 
+		if(tag==MODULUSEQUAL)return "%="; 
+		if(tag==GT)return ">"; 
+		if(tag==GE)return ">="; 
+		if(tag==LT)return "<"; 
+		if(tag==LE)return "<="; 
+		if(tag==EQ)return "=="; 
+		if(tag==ASSIGN)return "="; 
+		if(tag==NE)return "!="; 
+		if(tag==NOT)return "!"; 
+		if(tag==AND)return "&&"; 
+		if(tag==OR)return "||"; 
+		return "";
+  }
     
 }
